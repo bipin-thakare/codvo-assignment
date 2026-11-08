@@ -1,0 +1,11 @@
+# EXPERIMENT 3 - datastore failure (cart backend)
+apiVersion: chaos-mesh.org/v1alpha1
+kind: PodChaos
+metadata: {name: exp3-redis-failure, namespace: boutique}
+spec:
+  action: pod-failure
+  mode: all
+  duration: 60s
+  selector:
+    namespaces: [boutique]
+    labelSelectors: {app: redis-cart}

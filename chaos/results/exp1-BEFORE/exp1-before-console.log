@@ -1,0 +1,13 @@
+[1/4] pre-check steady state (up to 3 tries: a 30 s smoke has only ~3 checkouts, one cold call can trip it)
+
+smoke: reqs=206 fail=0.00% checkout_ok=100.00% p95(all)=65.8ms
+[2/4] start load (10 it/s) in background
+[3/4] inject exp1-productcatalog-failure
+podchaos.chaos-mesh.org/exp1-productcatalog-failure created
+
+chaos: reqs=8835 fail=22.17% checkout_ok=99.60% p95(all)=44.3ms
+time="2026-11-08T13:37:02+05:30" level=error msg="thresholds on metrics 'http_req_failed{journey:checkout}' have been crossed"
+[4/4] recover + snapshot pod state
+recovery_seconds_after_fault_removed=1
+FAIL: SLI breach or abort (k6 exit 99) under exp1-productcatalog-failure
+CHAOS_DONE

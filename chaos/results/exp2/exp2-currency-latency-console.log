@@ -1,0 +1,12 @@
+[1/4] pre-check steady state (up to 3 tries: a 30 s smoke has only ~3 checkouts, one cold call can trip it)
+
+smoke: reqs=216 fail=0.00% checkout_ok=100.00% p95(all)=43.9ms
+[2/4] start load (10 it/s) in background
+[3/4] inject exp2-currency-latency
+networkchaos.chaos-mesh.org/exp2-currency-latency created
+
+chaos: reqs=9015 fail=0.00% checkout_ok=100.00% p95(all)=3952.2ms
+time="2026-11-08T13:47:58+05:30" level=error msg="thresholds on metrics 'http_req_duration{journey:browse}, http_req_duration{journey:checkout,step:place_order}' have been crossed"
+[4/4] recover + snapshot pod state
+recovery_seconds_after_fault_removed=0
+FAIL: SLI breach or abort (k6 exit 99) under exp2-currency-latency

@@ -1,0 +1,5 @@
+# Single node: the Docker VM has only ~5 GB RAM (see decisions D5/D7). Add workers on a bigger machine.
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+  - role: control-plane

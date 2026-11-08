@@ -1,0 +1,12 @@
+[1/4] pre-check steady state (up to 3 tries: a 30 s smoke has only ~3 checkouts, one cold call can trip it)
+
+smoke: reqs=236 fail=0.00% checkout_ok=100.00% p95(all)=46.8ms
+[2/4] start load (10 it/s) in background
+[3/4] inject exp1-productcatalog-failure
+podchaos.chaos-mesh.org/exp1-productcatalog-failure created
+
+chaos: reqs=9140 fail=0.00% checkout_ok=100.00% p95(all)=27.8ms
+[4/4] recover + snapshot pod state
+recovery_seconds_after_fault_removed=0
+PASS: SLIs held under exp1-productcatalog-failure
+CHAOS_DONE

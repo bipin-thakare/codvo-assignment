@@ -1,0 +1,57 @@
+..FFF                                                                    [100%]
+=================================== FAILURES ===================================
+__________________________ test_s01_security_headers ___________________________
+
+s = <requests.sessions.Session object at 0x10858d550>
+base = 'http://localhost:8080'
+
+    @pytest.mark.warn
+    def test_s01_security_headers(s, base):
+        """Defense in depth against clickjacking/MIME sniffing/XSS. Upstream sends none; expected to FAIL."""
+        h = s.get(base + "/").headers
+        missing = [k for k in ["Content-Security-Policy", "X-Content-Type-Options", "X-Frame-Options|frame-ancestors", "Referrer-Policy"]
+                   if not any(re.search(k, name, re.I) for name in h) and not ("frame-ancestors" in h.get("Content-Security-Policy", ""))]
+>       assert not missing, f"missing headers: {missing}"
+E       AssertionError: missing headers: ['Content-Security-Policy', 'X-Content-Type-Options', 'X-Frame-Options|frame-ancestors', 'Referrer-Policy']
+E       assert not ['Content-Security-Policy', 'X-Content-Type-Options', 'X-Frame-Options|frame-ancestors', 'Referrer-Policy']
+
+tests/test_frontend.py:12: AssertionError
+____________________________ test_s02_cookie_flags _____________________________
+
+s = <requests.sessions.Session object at 0x108573390>
+base = 'http://localhost:8080'
+
+    @pytest.mark.warn
+    def test_s02_cookie_flags(s, base):
+        """Session cookie must be HttpOnly + SameSite (+ Secure when served over TLS)."""
+        r = s.get(base + "/")
+        sc = [v for k, v in r.raw.headers.items() if k.lower() == "set-cookie"]
+        assert sc, "no cookie issued"
+        ck = " ".join(sc).lower()
+>       assert "httponly" in ck and "samesite" in ck, f"weak cookie flags: {sc}"
+E       AssertionError: weak cookie flags: ['shop_session-id=22837aee-7ed3-4210-a832-e2e60454ea62; Max-Age=172800']
+E       assert ('httponly' in 'shop_session-id=22837aee-7ed3-4210-a832-e2e60454ea62; max-age=172800')
+
+tests/test_frontend.py:21: AssertionError
+____________________________ test_s06_rate_limiting ____________________________
+
+s = <requests.sessions.Session object at 0x108573890>
+base = 'http://localhost:8080'
+
+    @pytest.mark.warn
+    def test_s06_rate_limiting(s, base):
+        """Burst of 200 requests from one client should hit 429 at some point. Upstream has no limiter."""
+        codes = [s.get(base + "/").status_code for _ in range(200)]
+>       assert 429 in codes, f"no throttling observed in 200 rapid requests (codes seen: {sorted(set(codes))})"
+E       AssertionError: no throttling observed in 200 rapid requests (codes seen: [200])
+E       assert 429 in [200, 200, 200, 200, 200, 200, ...]
+
+tests/test_frontend.py:62: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_cluster.py::test_s10_pod_security
+PASSED tests/test_cluster.py::test_s11_secrets_not_in_plain_env
+FAILED tests/test_frontend.py::test_s01_security_headers - AssertionError: mi...
+FAILED tests/test_frontend.py::test_s02_cookie_flags - AssertionError: weak c...
+FAILED tests/test_frontend.py::test_s06_rate_limiting - AssertionError: no th...
+3 failed, 2 passed, 8 deselected in 9.83s

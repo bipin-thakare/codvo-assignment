@@ -1,0 +1,13 @@
+[1/4] pre-check steady state
+
+smoke: reqs=214 fail=0.00% checkout_ok=100.00% p95(all)=106.9ms
+[2/4] start load (10 it/s) in background
+[3/4] inject exp1-productcatalog-failure
+podchaos.chaos-mesh.org/exp1-productcatalog-failure created
+
+chaos: reqs=2290 fail=1.44% checkout_ok=100.00% p95(all)=137.8ms
+time="2026-11-08T13:29:53+05:30" level=error msg="thresholds on metrics 'http_req_failed{journey:checkout}' were crossed; at least one has abortOnFail enabled, stopping test prematurely"
+[4/4] recover + snapshot pod state
+recovery_seconds_after_fault_removed=7
+FAIL: SLI breach or abort (k6 exit 99) under exp1-productcatalog-failure
+CHAOS_DONE

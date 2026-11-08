@@ -1,0 +1,627 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: perf/load.js
+        output: Prometheus remote write (http://localhost:9090/api/v1/write)
+
+     scenarios: (100.00%) 1 scenario, 500 max VUs, 5m30s max duration (incl. graceful stop):
+              * baseline: 5.00 iterations/s for 5m0s (maxVUs: 50-500, exec: journey, gracefulStop: 30s)
+
+
+running (0m01.0s), 006/050 VUs, 0 complete and 0 interrupted iterations
+baseline   [   0% ] 006/050 VUs  0m01.0s/5m0s  5.00 iters/s
+
+running (0m02.0s), 009/050 VUs, 1 complete and 0 interrupted iterations
+baseline   [   1% ] 009/050 VUs  0m02.0s/5m0s  5.00 iters/s
+
+running (0m03.0s), 013/050 VUs, 2 complete and 0 interrupted iterations
+baseline   [   1% ] 013/050 VUs  0m03.0s/5m0s  5.00 iters/s
+
+running (0m04.0s), 015/050 VUs, 5 complete and 0 interrupted iterations
+baseline   [   1% ] 015/050 VUs  0m04.0s/5m0s  5.00 iters/s
+
+running (0m05.0s), 017/050 VUs, 8 complete and 0 interrupted iterations
+baseline   [   2% ] 017/050 VUs  0m05.0s/5m0s  5.00 iters/s
+
+running (0m06.0s), 015/050 VUs, 15 complete and 0 interrupted iterations
+baseline   [   2% ] 015/050 VUs  0m06.0s/5m0s  5.00 iters/s
+
+running (0m07.0s), 013/050 VUs, 22 complete and 0 interrupted iterations
+baseline   [   2% ] 013/050 VUs  0m07.0s/5m0s  5.00 iters/s
+
+running (0m08.0s), 014/050 VUs, 26 complete and 0 interrupted iterations
+baseline   [   3% ] 014/050 VUs  0m08.0s/5m0s  5.00 iters/s
+
+running (0m09.0s), 015/050 VUs, 30 complete and 0 interrupted iterations
+baseline   [   3% ] 015/050 VUs  0m09.0s/5m0s  5.00 iters/s
+
+running (0m10.0s), 013/050 VUs, 37 complete and 0 interrupted iterations
+baseline   [   3% ] 013/050 VUs  0m10.0s/5m0s  5.00 iters/s
+
+running (0m11.0s), 014/050 VUs, 41 complete and 0 interrupted iterations
+baseline   [   4% ] 014/050 VUs  0m11.0s/5m0s  5.00 iters/s
+
+running (0m12.0s), 011/050 VUs, 49 complete and 0 interrupted iterations
+baseline   [   4% ] 011/050 VUs  0m12.0s/5m0s  5.00 iters/s
+
+running (0m13.0s), 012/050 VUs, 53 complete and 0 interrupted iterations
+baseline   [   4% ] 012/050 VUs  0m13.0s/5m0s  5.00 iters/s
+
+running (0m14.0s), 011/050 VUs, 59 complete and 0 interrupted iterations
+baseline   [   5% ] 011/050 VUs  0m14.0s/5m0s  5.00 iters/s
+
+running (0m15.0s), 011/050 VUs, 64 complete and 0 interrupted iterations
+baseline   [   5% ] 011/050 VUs  0m15.0s/5m0s  5.00 iters/s
+
+running (0m16.0s), 011/050 VUs, 69 complete and 0 interrupted iterations
+baseline   [   5% ] 011/050 VUs  0m16.0s/5m0s  5.00 iters/s
+
+running (0m17.0s), 008/050 VUs, 77 complete and 0 interrupted iterations
+baseline   [   6% ] 008/050 VUs  0m17.0s/5m0s  5.00 iters/s
+
+running (0m18.0s), 010/050 VUs, 80 complete and 0 interrupted iterations
+baseline   [   6% ] 010/050 VUs  0m18.0s/5m0s  5.00 iters/s
+
+running (0m19.0s), 009/050 VUs, 86 complete and 0 interrupted iterations
+baseline   [   6% ] 009/050 VUs  0m19.0s/5m0s  5.00 iters/s
+
+running (0m20.0s), 014/050 VUs, 86 complete and 0 interrupted iterations
+baseline   [   7% ] 014/050 VUs  0m20.0s/5m0s  5.00 iters/s
+
+running (0m21.0s), 013/050 VUs, 92 complete and 0 interrupted iterations
+baseline   [   7% ] 013/050 VUs  0m21.0s/5m0s  5.00 iters/s
+
+running (0m22.0s), 014/050 VUs, 96 complete and 0 interrupted iterations
+baseline   [   7% ] 014/050 VUs  0m22.0s/5m0s  5.00 iters/s
+
+running (0m23.0s), 014/050 VUs, 101 complete and 0 interrupted iterations
+baseline   [   8% ] 014/050 VUs  0m23.0s/5m0s  5.00 iters/s
+
+running (0m24.0s), 015/050 VUs, 105 complete and 0 interrupted iterations
+baseline   [   8% ] 015/050 VUs  0m24.0s/5m0s  5.00 iters/s
+
+running (0m25.0s), 013/050 VUs, 112 complete and 0 interrupted iterations
+baseline   [   8% ] 013/050 VUs  0m25.0s/5m0s  5.00 iters/s
+
+running (0m26.0s), 013/050 VUs, 117 complete and 0 interrupted iterations
+baseline   [   9% ] 013/050 VUs  0m26.0s/5m0s  5.00 iters/s
+
+running (0m27.0s), 013/050 VUs, 122 complete and 0 interrupted iterations
+baseline   [   9% ] 013/050 VUs  0m27.0s/5m0s  5.00 iters/s
+
+running (0m28.0s), 011/050 VUs, 129 complete and 0 interrupted iterations
+baseline   [   9% ] 011/050 VUs  0m28.0s/5m0s  5.00 iters/s
+
+running (0m29.0s), 014/050 VUs, 131 complete and 0 interrupted iterations
+baseline   [  10% ] 014/050 VUs  0m29.0s/5m0s  5.00 iters/s
+
+running (0m30.0s), 017/050 VUs, 133 complete and 0 interrupted iterations
+baseline   [  10% ] 017/050 VUs  0m30.0s/5m0s  5.00 iters/s
+
+running (0m31.0s), 022/050 VUs, 134 complete and 0 interrupted iterations
+baseline   [  10% ] 022/050 VUs  0m31.0s/5m0s  5.00 iters/s
+
+running (0m32.0s), 026/050 VUs, 134 complete and 0 interrupted iterations
+baseline   [  11% ] 027/050 VUs  0m32.0s/5m0s  5.00 iters/s
+
+running (0m33.0s), 031/050 VUs, 134 complete and 0 interrupted iterations
+baseline   [  11% ] 031/050 VUs  0m33.0s/5m0s  5.00 iters/s
+
+running (0m34.0s), 036/050 VUs, 134 complete and 0 interrupted iterations
+baseline   [  11% ] 036/050 VUs  0m34.0s/5m0s  5.00 iters/s
+
+running (0m35.0s), 041/050 VUs, 134 complete and 0 interrupted iterations
+baseline   [  12% ] 041/050 VUs  0m35.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:58:05+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:58:05+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.282183459s while flush period is 5s. Some samples may be dropped." nts=529 output="Prometheus remote write"
+
+running (0m36.0s), 046/050 VUs, 134 complete and 0 interrupted iterations
+baseline   [  12% ] 046/050 VUs  0m36.0s/5m0s  5.00 iters/s
+
+running (0m37.0s), 050/051 VUs, 134 complete and 0 interrupted iterations
+baseline   [  12% ] 050/051 VUs  0m37.0s/5m0s  5.00 iters/s
+
+running (0m38.0s), 053/053 VUs, 134 complete and 0 interrupted iterations
+baseline   [  13% ] 053/053 VUs  0m38.0s/5m0s  5.00 iters/s
+
+running (0m39.0s), 055/056 VUs, 134 complete and 0 interrupted iterations
+baseline   [  13% ] 055/056 VUs  0m39.0s/5m0s  5.00 iters/s
+
+running (0m40.0s), 058/058 VUs, 134 complete and 0 interrupted iterations
+baseline   [  13% ] 058/058 VUs  0m40.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:58:10+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:58:10+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.04495775s while flush period is 5s. Some samples may be dropped." nts=12 output="Prometheus remote write"
+
+running (0m41.0s), 060/061 VUs, 134 complete and 0 interrupted iterations
+baseline   [  14% ] 060/061 VUs  0m41.0s/5m0s  5.00 iters/s
+
+running (0m42.0s), 063/063 VUs, 134 complete and 0 interrupted iterations
+baseline   [  14% ] 063/063 VUs  0m42.0s/5m0s  5.00 iters/s
+
+running (0m43.0s), 065/066 VUs, 134 complete and 0 interrupted iterations
+baseline   [  14% ] 065/066 VUs  0m43.0s/5m0s  5.00 iters/s
+
+running (0m44.0s), 068/068 VUs, 134 complete and 0 interrupted iterations
+baseline   [  15% ] 068/068 VUs  0m44.0s/5m0s  5.00 iters/s
+
+running (0m45.0s), 070/070 VUs, 135 complete and 0 interrupted iterations
+baseline   [  15% ] 070/070 VUs  0m45.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:58:15+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:58:15+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.033682042s while flush period is 5s. Some samples may be dropped." nts=27 output="Prometheus remote write"
+
+running (0m46.0s), 072/072 VUs, 136 complete and 0 interrupted iterations
+baseline   [  15% ] 072/072 VUs  0m46.0s/5m0s  5.00 iters/s
+
+running (0m47.1s), 074/074 VUs, 137 complete and 0 interrupted iterations
+baseline   [  16% ] 074/074 VUs  0m47.1s/5m0s  5.00 iters/s
+
+running (0m48.0s), 077/077 VUs, 137 complete and 0 interrupted iterations
+baseline   [  16% ] 077/077 VUs  0m48.0s/5m0s  5.00 iters/s
+
+running (0m49.0s), 078/078 VUs, 137 complete and 0 interrupted iterations
+baseline   [  16% ] 078/078 VUs  0m49.0s/5m0s  5.00 iters/s
+
+running (0m50.0s), 079/080 VUs, 137 complete and 0 interrupted iterations
+baseline   [  17% ] 079/080 VUs  0m50.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:58:20+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:58:20+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.578712s while flush period is 5s. Some samples may be dropped." nts=154 output="Prometheus remote write"
+
+running (0m51.0s), 082/082 VUs, 137 complete and 0 interrupted iterations
+baseline   [  17% ] 082/082 VUs  0m51.0s/5m0s  5.00 iters/s
+
+running (0m52.0s), 084/085 VUs, 137 complete and 0 interrupted iterations
+baseline   [  17% ] 084/085 VUs  0m52.0s/5m0s  5.00 iters/s
+
+running (0m53.0s), 087/087 VUs, 137 complete and 0 interrupted iterations
+baseline   [  18% ] 087/087 VUs  0m53.0s/5m0s  5.00 iters/s
+
+running (0m54.0s), 089/090 VUs, 137 complete and 0 interrupted iterations
+baseline   [  18% ] 089/090 VUs  0m54.0s/5m0s  5.00 iters/s
+
+running (0m55.0s), 091/092 VUs, 138 complete and 0 interrupted iterations
+baseline   [  18% ] 091/092 VUs  0m55.0s/5m0s  5.00 iters/s
+
+running (0m56.0s), 092/093 VUs, 141 complete and 0 interrupted iterations
+baseline   [  19% ] 092/093 VUs  0m56.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:58:26+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:58:26+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.1867105s while flush period is 5s. Some samples may be dropped." nts=60 output="Prometheus remote write"
+
+running (0m57.0s), 093/093 VUs, 145 complete and 0 interrupted iterations
+baseline   [  19% ] 093/093 VUs  0m57.0s/5m0s  5.00 iters/s
+
+running (0m58.0s), 094/094 VUs, 148 complete and 0 interrupted iterations
+baseline   [  19% ] 094/094 VUs  0m58.0s/5m0s  5.00 iters/s
+
+running (0m59.0s), 096/096 VUs, 149 complete and 0 interrupted iterations
+baseline   [  20% ] 096/096 VUs  0m59.0s/5m0s  5.00 iters/s
+
+running (1m00.0s), 098/099 VUs, 149 complete and 0 interrupted iterations
+baseline   [  20% ] 098/099 VUs  1m00.0s/5m0s  5.00 iters/s
+
+running (1m01.0s), 101/101 VUs, 149 complete and 0 interrupted iterations
+baseline   [  20% ] 101/101 VUs  1m01.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:58:31+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:58:31+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.038936792s while flush period is 5s. Some samples may be dropped." nts=502 output="Prometheus remote write"
+
+running (1m02.0s), 103/103 VUs, 150 complete and 0 interrupted iterations
+baseline   [  21% ] 103/103 VUs  1m02.0s/5m0s  5.00 iters/s
+
+running (1m03.0s), 105/105 VUs, 151 complete and 0 interrupted iterations
+baseline   [  21% ] 105/105 VUs  1m03.0s/5m0s  5.00 iters/s
+
+running (1m04.0s), 105/107 VUs, 154 complete and 0 interrupted iterations
+baseline   [  21% ] 105/107 VUs  1m04.0s/5m0s  5.00 iters/s
+
+running (1m05.0s), 108/109 VUs, 154 complete and 0 interrupted iterations
+baseline   [  22% ] 108/109 VUs  1m05.0s/5m0s  5.00 iters/s
+
+running (1m06.0s), 110/110 VUs, 156 complete and 0 interrupted iterations
+baseline   [  22% ] 110/110 VUs  1m06.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:58:36+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:58:36+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.006211833s while flush period is 5s. Some samples may be dropped." nts=409 output="Prometheus remote write"
+
+running (1m07.0s), 111/112 VUs, 158 complete and 0 interrupted iterations
+baseline   [  22% ] 111/112 VUs  1m07.0s/5m0s  5.00 iters/s
+
+running (1m08.0s), 113/113 VUs, 160 complete and 0 interrupted iterations
+baseline   [  23% ] 113/113 VUs  1m08.0s/5m0s  5.00 iters/s
+
+running (1m09.0s), 114/114 VUs, 163 complete and 0 interrupted iterations
+baseline   [  23% ] 114/114 VUs  1m09.0s/5m0s  5.00 iters/s
+
+running (1m10.0s), 113/115 VUs, 168 complete and 0 interrupted iterations
+baseline   [  23% ] 113/115 VUs  1m10.0s/5m0s  5.00 iters/s
+
+running (1m11.0s), 115/116 VUs, 170 complete and 0 interrupted iterations
+baseline   [  24% ] 115/116 VUs  1m11.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:58:41+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:58:41+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.011502041s while flush period is 5s. Some samples may be dropped." nts=456 output="Prometheus remote write"
+
+running (1m12.0s), 116/118 VUs, 172 complete and 0 interrupted iterations
+baseline   [  24% ] 116/118 VUs  1m12.0s/5m0s  5.00 iters/s
+
+running (1m13.0s), 110/118 VUs, 183 complete and 0 interrupted iterations
+baseline   [  24% ] 110/118 VUs  1m13.0s/5m0s  5.00 iters/s
+
+running (1m14.0s), 102/118 VUs, 196 complete and 0 interrupted iterations
+baseline   [  25% ] 102/118 VUs  1m14.0s/5m0s  5.00 iters/s
+
+running (1m15.0s), 097/118 VUs, 206 complete and 0 interrupted iterations
+baseline   [  25% ] 097/118 VUs  1m15.0s/5m0s  5.00 iters/s
+
+running (1m16.0s), 085/118 VUs, 223 complete and 0 interrupted iterations
+baseline   [  25% ] 085/118 VUs  1m16.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:58:46+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:58:46+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.015945333s while flush period is 5s. Some samples may be dropped." nts=180 output="Prometheus remote write"
+
+running (1m17.0s), 071/118 VUs, 242 complete and 0 interrupted iterations
+baseline   [  26% ] 071/118 VUs  1m17.0s/5m0s  5.00 iters/s
+
+running (1m18.0s), 068/118 VUs, 250 complete and 0 interrupted iterations
+baseline   [  26% ] 068/118 VUs  1m18.0s/5m0s  5.00 iters/s
+
+running (1m19.0s), 063/118 VUs, 260 complete and 0 interrupted iterations
+baseline   [  26% ] 063/118 VUs  1m19.0s/5m0s  5.00 iters/s
+
+running (1m20.0s), 053/118 VUs, 275 complete and 0 interrupted iterations
+baseline   [  27% ] 053/118 VUs  1m20.0s/5m0s  5.00 iters/s
+
+running (1m21.0s), 051/118 VUs, 282 complete and 0 interrupted iterations
+baseline   [  27% ] 051/118 VUs  1m21.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:58:51+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:58:51+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.094432709s while flush period is 5s. Some samples may be dropped." nts=875 output="Prometheus remote write"
+
+running (1m22.0s), 050/118 VUs, 288 complete and 0 interrupted iterations
+baseline   [  27% ] 050/118 VUs  1m22.0s/5m0s  5.00 iters/s
+
+running (1m23.0s), 048/118 VUs, 295 complete and 0 interrupted iterations
+baseline   [  28% ] 048/118 VUs  1m23.0s/5m0s  5.00 iters/s
+
+running (1m24.0s), 050/118 VUs, 298 complete and 0 interrupted iterations
+baseline   [  28% ] 050/118 VUs  1m24.0s/5m0s  5.00 iters/s
+
+running (1m25.0s), 051/118 VUs, 302 complete and 0 interrupted iterations
+baseline   [  28% ] 051/118 VUs  1m25.0s/5m0s  5.00 iters/s
+
+running (1m26.0s), 051/118 VUs, 307 complete and 0 interrupted iterations
+baseline   [  29% ] 051/118 VUs  1m26.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:58:56+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:58:56+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.050570416s while flush period is 5s. Some samples may be dropped." nts=736 output="Prometheus remote write"
+
+running (1m27.0s), 055/118 VUs, 308 complete and 0 interrupted iterations
+baseline   [  29% ] 055/118 VUs  1m27.0s/5m0s  5.00 iters/s
+
+running (1m28.0s), 059/118 VUs, 309 complete and 0 interrupted iterations
+baseline   [  29% ] 059/118 VUs  1m28.0s/5m0s  5.00 iters/s
+
+running (1m29.0s), 063/118 VUs, 310 complete and 0 interrupted iterations
+baseline   [  30% ] 063/118 VUs  1m29.0s/5m0s  5.00 iters/s
+
+running (1m30.0s), 064/118 VUs, 314 complete and 0 interrupted iterations
+baseline   [  30% ] 064/118 VUs  1m30.0s/5m0s  5.00 iters/s
+
+running (1m31.0s), 067/118 VUs, 316 complete and 0 interrupted iterations
+baseline   [  30% ] 067/118 VUs  1m31.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:01+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:59:01+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.053280958s while flush period is 5s. Some samples may be dropped." nts=575 output="Prometheus remote write"
+
+running (1m32.0s), 072/118 VUs, 316 complete and 0 interrupted iterations
+baseline   [  31% ] 072/118 VUs  1m32.0s/5m0s  5.00 iters/s
+
+running (1m33.0s), 076/118 VUs, 317 complete and 0 interrupted iterations
+baseline   [  31% ] 076/118 VUs  1m33.0s/5m0s  5.00 iters/s
+
+running (1m34.0s), 081/118 VUs, 317 complete and 0 interrupted iterations
+baseline   [  31% ] 081/118 VUs  1m34.0s/5m0s  5.00 iters/s
+
+running (1m35.0s), 081/118 VUs, 322 complete and 0 interrupted iterations
+baseline   [  32% ] 081/118 VUs  1m35.0s/5m0s  5.00 iters/s
+
+running (1m36.0s), 068/118 VUs, 340 complete and 0 interrupted iterations
+baseline   [  32% ] 068/118 VUs  1m36.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:06+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:59:06+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.020009292s while flush period is 5s. Some samples may be dropped." nts=409 output="Prometheus remote write"
+
+running (1m37.0s), 068/118 VUs, 345 complete and 0 interrupted iterations
+baseline   [  32% ] 068/118 VUs  1m37.0s/5m0s  5.00 iters/s
+
+running (1m38.0s), 069/118 VUs, 349 complete and 0 interrupted iterations
+baseline   [  33% ] 069/118 VUs  1m38.0s/5m0s  5.00 iters/s
+
+running (1m39.0s), 065/118 VUs, 358 complete and 0 interrupted iterations
+baseline   [  33% ] 065/118 VUs  1m39.0s/5m0s  5.00 iters/s
+
+running (1m40.0s), 052/118 VUs, 376 complete and 0 interrupted iterations
+baseline   [  33% ] 052/118 VUs  1m40.0s/5m0s  5.00 iters/s
+
+running (1m41.0s), 047/118 VUs, 386 complete and 0 interrupted iterations
+baseline   [  34% ] 047/118 VUs  1m41.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:11+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:59:11+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.029212667s while flush period is 5s. Some samples may be dropped." nts=759 output="Prometheus remote write"
+
+running (1m42.0s), 034/118 VUs, 404 complete and 0 interrupted iterations
+baseline   [  34% ] 034/118 VUs  1m42.0s/5m0s  5.00 iters/s
+
+running (1m43.0s), 027/118 VUs, 416 complete and 0 interrupted iterations
+baseline   [  34% ] 027/118 VUs  1m43.0s/5m0s  5.00 iters/s
+
+running (1m44.0s), 020/118 VUs, 428 complete and 0 interrupted iterations
+baseline   [  35% ] 020/118 VUs  1m44.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:14+05:30" level=error msg="Failed to send the time series data to the endpoint" error="got status code: 503 instead expected a 2xx successful status code" output="Prometheus remote write"
+
+running (1m45.0s), 017/118 VUs, 436 complete and 0 interrupted iterations
+baseline   [  35% ] 017/118 VUs  1m45.0s/5m0s  5.00 iters/s
+
+running (1m46.0s), 017/118 VUs, 441 complete and 0 interrupted iterations
+baseline   [  35% ] 017/118 VUs  1m46.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:16+05:30" level=error msg="Failed to send the time series data to the endpoint" error="got status code: 503 instead expected a 2xx successful status code" output="Prometheus remote write"
+
+running (1m47.0s), 015/118 VUs, 448 complete and 0 interrupted iterations
+baseline   [  36% ] 015/118 VUs  1m47.0s/5m0s  5.00 iters/s
+
+running (1m48.0s), 015/118 VUs, 453 complete and 0 interrupted iterations
+baseline   [  36% ] 015/118 VUs  1m48.0s/5m0s  5.00 iters/s
+
+running (1m49.0s), 017/118 VUs, 456 complete and 0 interrupted iterations
+baseline   [  36% ] 017/118 VUs  1m49.0s/5m0s  5.00 iters/s
+
+running (1m50.0s), 020/118 VUs, 458 complete and 0 interrupted iterations
+baseline   [  37% ] 020/118 VUs  1m50.0s/5m0s  5.00 iters/s
+
+running (1m51.0s), 021/118 VUs, 462 complete and 0 interrupted iterations
+baseline   [  37% ] 021/118 VUs  1m51.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:21+05:30" level=error msg="Failed to send the time series data to the endpoint" error="got status code: 503 instead expected a 2xx successful status code" output="Prometheus remote write"
+
+running (1m52.0s), 024/118 VUs, 464 complete and 0 interrupted iterations
+baseline   [  37% ] 024/118 VUs  1m52.0s/5m0s  5.00 iters/s
+
+running (1m53.0s), 029/118 VUs, 464 complete and 0 interrupted iterations
+baseline   [  38% ] 029/118 VUs  1m53.0s/5m0s  5.00 iters/s
+
+running (1m54.0s), 034/118 VUs, 464 complete and 0 interrupted iterations
+baseline   [  38% ] 034/118 VUs  1m54.0s/5m0s  5.00 iters/s
+
+running (1m55.0s), 034/118 VUs, 469 complete and 0 interrupted iterations
+baseline   [  38% ] 034/118 VUs  1m55.0s/5m0s  5.00 iters/s
+
+running (1m56.0s), 033/118 VUs, 475 complete and 0 interrupted iterations
+baseline   [  39% ] 033/118 VUs  1m56.0s/5m0s  5.00 iters/s
+
+running (1m57.0s), 032/118 VUs, 481 complete and 0 interrupted iterations
+baseline   [  39% ] 032/118 VUs  1m57.0s/5m0s  5.00 iters/s
+
+running (1m58.0s), 030/118 VUs, 488 complete and 0 interrupted iterations
+baseline   [  39% ] 030/118 VUs  1m58.0s/5m0s  5.00 iters/s
+
+running (1m59.0s), 027/118 VUs, 496 complete and 0 interrupted iterations
+baseline   [  40% ] 027/118 VUs  1m59.0s/5m0s  5.00 iters/s
+
+running (2m00.0s), 030/118 VUs, 498 complete and 0 interrupted iterations
+baseline   [  40% ] 030/118 VUs  2m00.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:29+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)" output="Prometheus remote write"
+time="2026-11-08T11:59:29+05:30" level=warning msg="Successful flushed time series to remote write endpoint but it took 5.028361875s while flush period is 5s. Some samples may be dropped." nts=616 output="Prometheus remote write"
+time="2026-11-08T11:59:30+05:30" level=error msg="Failed to send the time series data to the endpoint" error="got status code: 503 instead expected a 2xx successful status code" output="Prometheus remote write"
+
+running (2m01.0s), 028/118 VUs, 505 complete and 0 interrupted iterations
+baseline   [  40% ] 028/118 VUs  2m01.0s/5m0s  5.00 iters/s
+
+running (2m02.0s), 027/118 VUs, 511 complete and 0 interrupted iterations
+baseline   [  41% ] 027/118 VUs  2m02.0s/5m0s  5.00 iters/s
+
+running (2m03.0s), 019/118 VUs, 524 complete and 0 interrupted iterations
+baseline   [  41% ] 019/118 VUs  2m03.0s/5m0s  5.00 iters/s
+
+running (2m04.0s), 022/118 VUs, 526 complete and 0 interrupted iterations
+baseline   [  41% ] 022/118 VUs  2m04.0s/5m0s  5.00 iters/s
+
+running (2m05.0s), 025/118 VUs, 528 complete and 0 interrupted iterations
+baseline   [  42% ] 025/118 VUs  2m05.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:35+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": EOF" output="Prometheus remote write"
+
+running (2m06.0s), 030/118 VUs, 528 complete and 0 interrupted iterations
+baseline   [  42% ] 030/118 VUs  2m06.0s/5m0s  5.00 iters/s
+
+running (2m07.0s), 035/118 VUs, 528 complete and 0 interrupted iterations
+baseline   [  42% ] 035/118 VUs  2m07.0s/5m0s  5.00 iters/s
+
+running (2m08.0s), 040/118 VUs, 528 complete and 0 interrupted iterations
+baseline   [  43% ] 040/118 VUs  2m08.0s/5m0s  5.00 iters/s
+
+running (2m09.0s), 043/118 VUs, 530 complete and 0 interrupted iterations
+baseline   [  43% ] 043/118 VUs  2m09.0s/5m0s  5.00 iters/s
+
+running (2m10.0s), 046/118 VUs, 532 complete and 0 interrupted iterations
+baseline   [  43% ] 046/118 VUs  2m10.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:39+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+running (2m11.0s), 050/118 VUs, 533 complete and 0 interrupted iterations
+baseline   [  44% ] 050/118 VUs  2m11.0s/5m0s  5.00 iters/s
+
+running (2m12.0s), 050/118 VUs, 538 complete and 0 interrupted iterations
+baseline   [  44% ] 050/118 VUs  2m12.0s/5m0s  5.00 iters/s
+
+running (2m13.0s), 050/118 VUs, 543 complete and 0 interrupted iterations
+baseline   [  44% ] 050/118 VUs  2m13.0s/5m0s  5.00 iters/s
+
+running (2m14.0s), 035/118 VUs, 563 complete and 0 interrupted iterations
+baseline   [  45% ] 035/118 VUs  2m14.0s/5m0s  5.00 iters/s
+
+running (2m15.0s), 025/118 VUs, 578 complete and 0 interrupted iterations
+baseline   [  45% ] 025/118 VUs  2m15.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:45+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+running (2m16.0s), 021/118 VUs, 587 complete and 0 interrupted iterations
+baseline   [  45% ] 021/118 VUs  2m16.0s/5m0s  5.00 iters/s
+
+running (2m17.0s), 018/118 VUs, 595 complete and 0 interrupted iterations
+baseline   [  46% ] 018/118 VUs  2m17.0s/5m0s  5.00 iters/s
+
+running (2m18.0s), 020/118 VUs, 598 complete and 0 interrupted iterations
+baseline   [  46% ] 020/118 VUs  2m18.0s/5m0s  5.00 iters/s
+
+running (2m19.0s), 022/118 VUs, 601 complete and 0 interrupted iterations
+baseline   [  46% ] 022/118 VUs  2m19.0s/5m0s  5.00 iters/s
+
+running (2m20.0s), 022/118 VUs, 606 complete and 0 interrupted iterations
+baseline   [  47% ] 022/118 VUs  2m20.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:49+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+running (2m21.0s), 025/118 VUs, 608 complete and 0 interrupted iterations
+baseline   [  47% ] 025/118 VUs  2m21.0s/5m0s  5.00 iters/s
+
+running (2m22.0s), 028/118 VUs, 610 complete and 0 interrupted iterations
+baseline   [  47% ] 028/118 VUs  2m22.0s/5m0s  5.00 iters/s
+
+running (2m23.0s), 031/118 VUs, 612 complete and 0 interrupted iterations
+baseline   [  48% ] 031/118 VUs  2m23.0s/5m0s  5.00 iters/s
+
+running (2m24.0s), 035/118 VUs, 613 complete and 0 interrupted iterations
+baseline   [  48% ] 035/118 VUs  2m24.0s/5m0s  5.00 iters/s
+
+running (2m25.0s), 038/118 VUs, 615 complete and 0 interrupted iterations
+baseline   [  48% ] 038/118 VUs  2m25.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:54+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+running (2m26.0s), 041/118 VUs, 617 complete and 0 interrupted iterations
+baseline   [  49% ] 041/118 VUs  2m26.0s/5m0s  5.00 iters/s
+
+running (2m27.0s), 043/118 VUs, 620 complete and 0 interrupted iterations
+baseline   [  49% ] 043/118 VUs  2m27.0s/5m0s  5.00 iters/s
+
+running (2m28.0s), 044/118 VUs, 624 complete and 0 interrupted iterations
+baseline   [  49% ] 044/118 VUs  2m28.0s/5m0s  5.00 iters/s
+
+running (2m29.0s), 049/118 VUs, 624 complete and 0 interrupted iterations
+baseline   [  50% ] 049/118 VUs  2m29.0s/5m0s  5.00 iters/s
+
+running (2m30.0s), 054/118 VUs, 624 complete and 0 interrupted iterations
+baseline   [  50% ] 054/118 VUs  2m30.0s/5m0s  5.00 iters/s
+time="2026-11-08T11:59:59+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+running (2m31.0s), 056/118 VUs, 627 complete and 0 interrupted iterations
+baseline   [  50% ] 056/118 VUs  2m31.0s/5m0s  5.00 iters/s
+
+running (2m32.0s), 059/118 VUs, 629 complete and 0 interrupted iterations
+baseline   [  51% ] 059/118 VUs  2m32.0s/5m0s  5.00 iters/s
+
+running (2m33.0s), 058/118 VUs, 635 complete and 0 interrupted iterations
+baseline   [  51% ] 058/118 VUs  2m33.0s/5m0s  5.00 iters/s
+
+running (2m34.0s), 059/118 VUs, 639 complete and 0 interrupted iterations
+baseline   [  51% ] 059/118 VUs  2m34.0s/5m0s  5.00 iters/s
+
+running (2m35.0s), 057/118 VUs, 646 complete and 0 interrupted iterations
+baseline   [  52% ] 057/118 VUs  2m35.0s/5m0s  5.00 iters/s
+time="2026-11-08T12:00:05+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+running (2m36.0s), 062/118 VUs, 646 complete and 0 interrupted iterations
+baseline   [  52% ] 062/118 VUs  2m36.0s/5m0s  5.00 iters/s
+
+running (2m37.0s), 067/118 VUs, 646 complete and 0 interrupted iterations
+baseline   [  52% ] 067/118 VUs  2m37.0s/5m0s  5.00 iters/s
+
+running (2m38.0s), 072/118 VUs, 646 complete and 0 interrupted iterations
+baseline   [  53% ] 072/118 VUs  2m38.0s/5m0s  5.00 iters/s
+
+running (2m39.0s), 077/118 VUs, 646 complete and 0 interrupted iterations
+baseline   [  53% ] 077/118 VUs  2m39.0s/5m0s  5.00 iters/s
+
+running (2m40.0s), 080/118 VUs, 648 complete and 0 interrupted iterations
+baseline   [  53% ] 080/118 VUs  2m40.0s/5m0s  5.00 iters/s
+time="2026-11-08T12:00:09+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+running (2m41.0s), 082/118 VUs, 651 complete and 0 interrupted iterations
+baseline   [  54% ] 082/118 VUs  2m41.0s/5m0s  5.00 iters/s
+
+running (2m42.0s), 085/118 VUs, 653 complete and 0 interrupted iterations
+baseline   [  54% ] 085/118 VUs  2m42.0s/5m0s  5.00 iters/s
+
+running (2m43.0s), 086/118 VUs, 657 complete and 0 interrupted iterations
+baseline   [  54% ] 086/118 VUs  2m43.0s/5m0s  5.00 iters/s
+
+running (2m44.0s), 084/118 VUs, 664 complete and 0 interrupted iterations
+baseline   [  55% ] 084/118 VUs  2m44.0s/5m0s  5.00 iters/s
+
+running (2m45.0s), 087/118 VUs, 666 complete and 0 interrupted iterations
+baseline   [  55% ] 087/118 VUs  2m45.0s/5m0s  5.00 iters/s
+time="2026-11-08T12:00:14+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+running (2m46.0s), 085/118 VUs, 673 complete and 0 interrupted iterations
+baseline   [  55% ] 085/118 VUs  2m46.0s/5m0s  5.00 iters/s
+
+running (2m47.0s), 086/118 VUs, 677 complete and 0 interrupted iterations
+baseline   [  56% ] 086/118 VUs  2m47.0s/5m0s  5.00 iters/s
+
+running (2m48.0s), 086/118 VUs, 682 complete and 0 interrupted iterations
+baseline   [  56% ] 086/118 VUs  2m48.0s/5m0s  5.00 iters/s
+
+running (2m49.0s), 085/118 VUs, 688 complete and 0 interrupted iterations
+baseline   [  56% ] 085/118 VUs  2m49.0s/5m0s  5.00 iters/s
+
+running (2m50.0s), 085/118 VUs, 693 complete and 0 interrupted iterations
+baseline   [  57% ] 085/118 VUs  2m50.0s/5m0s  5.00 iters/s
+time="2026-11-08T12:00:19+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+running (2m51.0s), 088/118 VUs, 695 complete and 0 interrupted iterations
+baseline   [  57% ] 088/118 VUs  2m51.0s/5m0s  5.00 iters/s
+
+running (2m52.0s), 086/118 VUs, 702 complete and 0 interrupted iterations
+baseline   [  57% ] 086/118 VUs  2m52.0s/5m0s  5.00 iters/s
+
+running (2m53.0s), 090/118 VUs, 703 complete and 0 interrupted iterations
+baseline   [  58% ] 090/118 VUs  2m53.0s/5m0s  5.00 iters/s
+
+running (2m54.0s), 095/118 VUs, 703 complete and 0 interrupted iterations
+baseline   [  58% ] 095/118 VUs  2m54.0s/5m0s  5.00 iters/s
+
+running (2m55.0s), 100/118 VUs, 703 complete and 0 interrupted iterations
+baseline   [  58% ] 100/118 VUs  2m55.0s/5m0s  5.00 iters/s
+time="2026-11-08T12:00:24+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+running (2m56.0s), 105/118 VUs, 703 complete and 0 interrupted iterations
+baseline   [  59% ] 105/118 VUs  2m56.0s/5m0s  5.00 iters/s
+
+running (2m57.0s), 110/118 VUs, 703 complete and 0 interrupted iterations
+baseline   [  59% ] 110/118 VUs  2m57.0s/5m0s  5.00 iters/s
+
+running (2m58.0s), 115/118 VUs, 703 complete and 0 interrupted iterations
+baseline   [  59% ] 115/118 VUs  2m58.0s/5m0s  5.00 iters/s
+
+running (2m59.0s), 118/118 VUs, 705 complete and 0 interrupted iterations
+baseline   [  60% ] 118/118 VUs  2m59.0s/5m0s  5.00 iters/s
+
+running (3m00.0s), 109/119 VUs, 718 complete and 0 interrupted iterations
+baseline   [  60% ] 109/119 VUs  3m00.0s/5m0s  5.00 iters/s
+time="2026-11-08T12:00:29+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+running (3m01.0s), 102/119 VUs, 730 complete and 0 interrupted iterations
+baseline   [  60% ] 102/119 VUs  3m01.0s/5m0s  5.00 iters/s
+
+running (3m02.0s), 097/119 VUs, 740 complete and 0 interrupted iterations
+baseline   [  61% ] 097/119 VUs  3m02.0s/5m0s  5.00 iters/s
+
+running (3m03.0s), 098/119 VUs, 744 complete and 0 interrupted iterations
+baseline   [  61% ] 098/119 VUs  3m03.0s/5m0s  5.00 iters/s
+
+running (3m04.0s), 091/119 VUs, 756 complete and 0 interrupted iterations
+baseline   [  61% ] 091/119 VUs  3m04.0s/5m0s  5.00 iters/s
+
+running (3m05.0s), 085/119 VUs, 767 complete and 0 interrupted iterations
+baseline   [  62% ] 085/119 VUs  3m05.0s/5m0s  5.00 iters/s
+time="2026-11-08T12:00:34+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+running (3m06.0s), 065/119 VUs, 792 complete and 0 interrupted iterations
+baseline   [  62% ] 065/119 VUs  3m06.0s/5m0s  5.00 iters/s
+time="2026-11-08T12:00:35+05:30" level=error msg="Failed to send the time series data to the endpoint" error="HTTP POST request failed: Post \"http://localhost:9090/api/v1/write\": dial tcp [::1]:9090: connect: connection refused" output="Prometheus remote write"
+
+baseline: reqs=3115 fail=0.93% checkout_ok=100.00% p95(all)=11004.0ms
+
+running (3m06.1s), 000/119 VUs, 792 complete and 65 interrupted iterations
+baseline ✗ [  62% ] 065/119 VUs  3m06.0s/5m0s  5.00 iters/s
+time="2026-11-08T12:00:36+05:30" level=error msg="thresholds on metrics 'http_req_duration{journey:browse}, http_req_duration{journey:checkout,step:place_order}, http_req_failed{journey:checkout}' were crossed; at least one has abortOnFail enabled, stopping test prematurely"

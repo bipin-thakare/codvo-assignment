@@ -1,0 +1,6 @@
+..                                                                       [100%]
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_cluster.py::test_s08_unauthenticated_internal_grpc
+PASSED tests/test_cluster.py::test_s09_network_policies_exist
+2 passed, 11 deselected in 7.62s

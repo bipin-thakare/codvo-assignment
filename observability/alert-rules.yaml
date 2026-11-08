@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata: {name: boutique-slo, namespace: monitoring}
+spec:
+  groups:
+  - name: boutique.slo
+    rules:
+    - alert: FrontendPodRestarts
+      expr: increase(kube_pod_container_status_restarts_total{namespace="boutique"}[5m]) > 0
+      labels: {severity: warning}
+    - alert: BoutiqueCPUThrottling
+      expr: sum by (pod) (rate(container_cpu_cfs_throttled_periods_total{namespace="boutique"}[2m])) / sum by (pod) (rate(container_cpu_cfs_periods_total{namespace="boutique"}[2m])) > 0.25
+      for: 2m
+      labels: {severity: warning}
+    - alert: BoutiqueUnavailableReplicas
+      expr: kube_deployment_status_replicas_unavailable{namespace="boutique"} > 0
+      for: 1m
+      labels: {severity: critical}

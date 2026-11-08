@@ -1,0 +1,133 @@
+# FIX for S08/S09: default-deny ingress + least-privilege allow rules (derived from the call graph).
+# Apply: kubectl apply -f security/fixes/networkpolicies.yaml ; rerun: pytest security/tests -k 's08 or s09'
+# Requires a CNI that enforces NetworkPolicy (verify on your kind version; else install Calico).
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: default-deny-ingress, namespace: boutique}
+spec:
+  podSelector: {}
+  policyTypes: [Ingress]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: allow-frontend-ingress, namespace: boutique}
+spec:
+  podSelector: {matchLabels: {app: frontend}}
+  policyTypes: [Ingress]
+  ingress:
+  - ports: [{port: 8080}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: allow-cartservice, namespace: boutique}
+spec:
+  podSelector: {matchLabels: {app: cartservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    - podSelector: {matchLabels: {app: checkoutservice}}
+    ports: [{port: 7070}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: allow-productcatalogservice, namespace: boutique}
+spec:
+  podSelector: {matchLabels: {app: productcatalogservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    - podSelector: {matchLabels: {app: checkoutservice}}
+    - podSelector: {matchLabels: {app: recommendationservice}}
+    ports: [{port: 3550}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: allow-currencyservice, namespace: boutique}
+spec:
+  podSelector: {matchLabels: {app: currencyservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    - podSelector: {matchLabels: {app: checkoutservice}}
+    ports: [{port: 7000}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: allow-shippingservice, namespace: boutique}
+spec:
+  podSelector: {matchLabels: {app: shippingservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    - podSelector: {matchLabels: {app: checkoutservice}}
+    ports: [{port: 50051}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: allow-paymentservice, namespace: boutique}
+spec:
+  podSelector: {matchLabels: {app: paymentservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+    ports: [{port: 50051}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: allow-emailservice, namespace: boutique}
+spec:
+  podSelector: {matchLabels: {app: emailservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: checkoutservice}}
+    ports: [{port: 8080}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: allow-recommendationservice, namespace: boutique}
+spec:
+  podSelector: {matchLabels: {app: recommendationservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 8080}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: allow-adservice, namespace: boutique}
+spec:
+  podSelector: {matchLabels: {app: adservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 9555}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: allow-checkoutservice, namespace: boutique}
+spec:
+  podSelector: {matchLabels: {app: checkoutservice}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: frontend}}
+    ports: [{port: 5050}]
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata: {name: allow-redis-cart, namespace: boutique}
+spec:
+  podSelector: {matchLabels: {app: redis-cart}}
+  policyTypes: [Ingress]
+  ingress:
+  - from:
+    - podSelector: {matchLabels: {app: cartservice}}
+    ports: [{port: 6379}]

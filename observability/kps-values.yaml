@@ -1,0 +1,20 @@
+grafana:
+  adminPassword: admin
+  sidecar:
+    dashboards: {enabled: true, label: grafana_dashboard}
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+    ruleSelectorNilUsesHelmValues: false
+    retention: 2d
+    scrapeInterval: 30s
+    enableRemoteWriteReceiver: true   # lets k6 push metrics to Prometheus
+alertmanager: {enabled: false}
+# Trimmed for an 8 GB laptop (decisions D10): fewer scrape targets, slower scrape interval.
+nodeExporter: {enabled: false}
+kubeApiServer: {enabled: false}
+kubeEtcd: {enabled: false}
+kubeScheduler: {enabled: false}
+kubeControllerManager: {enabled: false}
+kubeProxy: {enabled: false}
+coreDns: {enabled: false}

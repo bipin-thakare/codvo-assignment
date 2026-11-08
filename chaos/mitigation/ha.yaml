@@ -1,0 +1,8 @@
+# Mitigation for the worst result of exp1 (single replica => full outage on the browse path).
+# Apply with: ./chaos/mitigation/apply.sh   (scales productcatalogservice to 2 and applies this PDB)
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata: {name: productcatalog-pdb, namespace: boutique}
+spec:
+  minAvailable: 1
+  selector: {matchLabels: {app: productcatalogservice}}

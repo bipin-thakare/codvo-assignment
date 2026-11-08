@@ -1,0 +1,11 @@
+# EXPERIMENT 1 - dependency failure (pod unavailable), single-replica catalog
+apiVersion: chaos-mesh.org/v1alpha1
+kind: PodChaos
+metadata: {name: exp1-productcatalog-failure, namespace: boutique}
+spec:
+  action: pod-failure
+  mode: one
+  duration: 60s
+  selector:
+    namespaces: [boutique]
+    labelSelectors: {app: productcatalogservice}

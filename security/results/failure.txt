@@ -1,0 +1,7 @@
+..                                                                       [100%]
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_failure_scenarios.py::test_f01_payment_down_fails_closed
+PASSED tests/test_failure_scenarios.py::test_f02_invalid_request_flood_does_not_degrade_valid_users
+2 passed, 11 deselected in 23.81s
+SEC2_DONE

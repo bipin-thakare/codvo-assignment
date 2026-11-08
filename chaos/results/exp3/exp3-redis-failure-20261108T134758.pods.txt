@@ -1,0 +1,11 @@
+NAME                                    READY   STATUS    RESTARTS        AGE    IP            NODE                     NOMINATED NODE   READINESS GATES
+cartservice-cbc88c5fb-874ct             1/1     Running   7 (2m22s ago)   125m   10.244.0.11   boutique-control-plane   <none>           <none>
+checkoutservice-bc9dbdd89-4896c         1/1     Running   1 (104m ago)    125m   10.244.0.18   boutique-control-plane   <none>           <none>
+currencyservice-78ddd54f56-5nlcl        1/1     Running   0               51m    10.244.0.20   boutique-control-plane   <none>           <none>
+emailservice-559c5d8749-8h89r           1/1     Running   9 (104m ago)    124m   10.244.0.16   boutique-control-plane   <none>           <none>
+frontend-67bdcfd44b-9bzzh               1/1     Running   1 (104m ago)    124m   10.244.0.9    boutique-control-plane   <none>           <none>
+paymentservice-6fc6d589fc-xw48z         1/1     Running   0               26m    10.244.0.24   boutique-control-plane   <none>           <none>
+productcatalogservice-b94f676f5-dfllr   1/1     Running   8 (12m ago)     122m   10.244.0.15   boutique-control-plane   <none>           <none>
+productcatalogservice-b94f676f5-nkgvb   1/1     Running   0               14m    10.244.0.29   boutique-control-plane   <none>           <none>
+redis-cart-6fdc7894b7-fwk6l             1/1     Running   5 (2m4s ago)    10h    10.244.0.8    boutique-control-plane   <none>           <none>
+shippingservice-585ffb4bf7-629nt        1/1     Running   1 (104m ago)    122m   10.244.0.12   boutique-control-plane   <none>           <none>

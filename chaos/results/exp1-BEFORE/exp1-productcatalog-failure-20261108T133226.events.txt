@@ -1,0 +1,40 @@
+9m52s       Normal    Created             pod/intruder                                Container created
+9m52s       Normal    Started             pod/intruder                                Container started
+9m34s       Normal    Pulled              pod/intruder                                Container image "busybox:1.36" already present on machine and can be accessed by the pod
+9m34s       Normal    Created             pod/intruder                                Container created
+9m34s       Normal    Started             pod/intruder                                Container started
+7m11s       Normal    Started             podchaos/exp1-productcatalog-failure        Experiment has started
+7m11s       Normal    Applied             podchaos/exp1-productcatalog-failure        Successfully apply chaos for boutique/productcatalogservice-b94f676f5-dfllr
+7m11s       Normal    Updated             podchaos/exp1-productcatalog-failure        Successfully update records of resource
+7m11s       Normal    Pulling             pod/productcatalogservice-b94f676f5-dfllr   Pulling image "gcr.io/google-containers/pause:latest"
+7m11s       Normal    FinalizerInited     podchaos/exp1-productcatalog-failure        Finalizer has been inited
+7m11s       Normal    Updated             podchaos/exp1-productcatalog-failure        Successfully update finalizer of resource
+7m11s       Normal    Updated             podchaos/exp1-productcatalog-failure        Successfully update desiredPhase of resource
+7m10s       Normal    Deleted             podchaos/exp1-productcatalog-failure        Experiment has been deleted
+7m9s        Normal    FinalizerInited     podchaos/exp1-productcatalog-failure        Finalizer has been removed
+7m9s        Normal    Updated             podchaos/exp1-productcatalog-failure        Successfully update desiredPhase of resource
+7m9s        Normal    Recovered           podchaos/exp1-productcatalog-failure        Successfully recover chaos for boutique/productcatalogservice-b94f676f5-dfllr
+7m9s        Normal    Updated             podchaos/exp1-productcatalog-failure        Successfully update records of resource
+7m9s        Normal    Updated             podchaos/exp1-productcatalog-failure        Successfully update finalizer of resource
+7m6s        Normal    Pulled              pod/productcatalogservice-b94f676f5-dfllr   Successfully pulled image "gcr.io/google-containers/pause:latest" in 5.35s (5.351s including waiting). Image size: 72335 bytes.
+3m6s        Normal    Updated             podchaos/exp1-productcatalog-failure        Successfully update desiredPhase of resource
+3m6s        Normal    Updated             podchaos/exp1-productcatalog-failure        Successfully update finalizer of resource
+3m6s        Normal    Started             podchaos/exp1-productcatalog-failure        Experiment has started
+3m6s        Normal    Applied             podchaos/exp1-productcatalog-failure        Successfully apply chaos for boutique/productcatalogservice-b94f676f5-dfllr
+3m6s        Normal    Updated             podchaos/exp1-productcatalog-failure        Successfully update records of resource
+3m6s        Normal    Killing             pod/productcatalogservice-b94f676f5-dfllr   Container server definition changed, will be restarted
+3m6s        Normal    FinalizerInited     podchaos/exp1-productcatalog-failure        Finalizer has been inited
+2m38s       Normal    Pulled              pod/productcatalogservice-b94f676f5-dfllr   Container image "gcr.io/google-containers/pause:latest" already present on machine and can be accessed by the pod
+2m8s        Normal    Killing             pod/productcatalogservice-b94f676f5-dfllr   Container server failed liveness probe, will be restarted
+2m8s        Warning   Unhealthy           pod/productcatalogservice-b94f676f5-dfllr   Liveness probe failed: timeout: failed to connect service "10.244.0.15:3550" within 5s: context deadline exceeded
+2m6s        Warning   BackOff             pod/productcatalogservice-b94f676f5-dfllr   Back-off restarting failed container server in pod productcatalogservice-b94f676f5-dfllr_boutique(70da1622-f8b9-4346-a334-ba2628a0139a)
+2m6s        Normal    Recovered           podchaos/exp1-productcatalog-failure        Successfully recover chaos for boutique/productcatalogservice-b94f676f5-dfllr
+2m6s        Normal    Updated             podchaos/exp1-productcatalog-failure        Successfully update desiredPhase of resource
+2m6s        Normal    TimeUp              podchaos/exp1-productcatalog-failure        Time up according to the duration
+2m6s        Normal    Updated             podchaos/exp1-productcatalog-failure        Successfully update records of resource
+2m5s        Warning   Unhealthy           pod/productcatalogservice-b94f676f5-dfllr   Readiness probe failed: timeout: failed to connect service "10.244.0.15:3550" within 5s: context deadline exceeded
+116s        Normal    Created             pod/productcatalogservice-b94f676f5-dfllr   Container created
+116s        Normal    Pulled              pod/productcatalogservice-b94f676f5-dfllr   Container image "us-central1-docker.pkg.dev/google-samples/microservices-demo/productcatalogservice:v0.10.2" already present on machine and can be accessed by the pod
+115s        Normal    Started             pod/productcatalogservice-b94f676f5-dfllr   Container started
+1s          Normal    FinalizerInited     podchaos/exp1-productcatalog-failure        Finalizer has been removed
+1s          Normal    Updated             podchaos/exp1-productcatalog-failure        Successfully update finalizer of resource

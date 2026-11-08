@@ -1,0 +1,13 @@
+# EXPERIMENT 2 - network latency on a service called by every page
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata: {name: exp2-currency-latency, namespace: boutique}
+spec:
+  action: delay
+  mode: all
+  duration: 120s
+  selector:
+    namespaces: [boutique]
+    labelSelectors: {app: currencyservice}
+  delay: {latency: 300ms, jitter: 50ms, correlation: "50"}
+  direction: to

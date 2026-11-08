@@ -1,0 +1,110 @@
+FFF.FF                                                                   [100%]
+=================================== FAILURES ===================================
+____________________ test_s08_unauthenticated_internal_grpc ____________________
+
+kube = <function kubectl at 0x106d5d590>
+
+    @pytest.mark.blocker
+    def test_s08_unauthenticated_internal_grpc(kube):
+        """From an unrelated pod, can we call paymentservice's gRPC port at all? (no authn, no mTLS)
+        With NetworkPolicies this connection must be refused."""
+        out = subprocess.run(
+            ["kubectl", "-n", "boutique", "run", "intruder", "--rm", "-i", "--restart=Never", "--image=busybox:1.36",
+             "--labels=app=intruder", "--", "sh", "-c", "nc -z -w 3 paymentservice 50051 && echo REACHABLE || echo BLOCKED"],
+            capture_output=True, text=True, timeout=90)
+>       assert "BLOCKED" in out.stdout, f"intruder pod reached paymentservice:50051 -> {out.stdout.strip()[:80]}"
+E       AssertionError: intruder pod reached paymentservice:50051 -> REACHABLE
+E         REACHABLE
+E         pod "intruder" deleted from boutique namespace
+E       assert 'BLOCKED' in 'REACHABLE\nREACHABLE\npod "intruder" deleted from boutique namespace\n'
+E        +  where 'REACHABLE\nREACHABLE\npod "intruder" deleted from boutique namespace\n' = CompletedProcess(args=['kubectl', '-n', 'boutique', 'run', 'intruder', '--rm', '-i', '--restart=Never', '--image=busyb...falling back to streaming logs: unable to upgrade connection: container intruder not found in pod intruder_boutique\n").stdout
+
+tests/test_cluster.py:16: AssertionError
+_______________________ test_s09_network_policies_exist ________________________
+
+kj = <function kj.<locals>._get at 0x10779ee50>
+
+    @pytest.mark.blocker
+    def test_s09_network_policies_exist(kj):
+        pols = kj("networkpolicies")["items"]
+>       assert pols, "no NetworkPolicy in namespace: flat network, every pod can reach every service"
+E       AssertionError: no NetworkPolicy in namespace: flat network, every pod can reach every service
+E       assert []
+
+tests/test_cluster.py:21: AssertionError
+_______________________ test_s03_error_pages_do_not_leak _______________________
+
+s = <requests.sessions.Session object at 0x107791e80>
+base = 'http://localhost:8080'
+
+    @pytest.mark.blocker
+    def test_s03_error_pages_do_not_leak(s, base):
+        """Unknown product id: user must not see stack traces, gRPC internals or file paths."""
+        r = s.get(base + "/product/DOES-NOT-EXIST")
+        body = r.text.lower()
+        leaks = [w for w in ["goroutine", "rpc error", "grpc", "panic", "/src/", ".go:", "traceback", "productcatalogservice:"] if w in body]
+>       assert not leaks, f"error page leaks internals {leaks} (status {r.status_code})"
+E       AssertionError: error page leaks internals ['rpc error', '/src/', '.go:'] (status 500)
+E       assert not ['rpc error', '/src/', '.go:']
+
+tests/test_frontend.py:29: AssertionError
+_______________________ test_s05_cross_user_cart_access ________________________
+
+base = 'http://localhost:8080'
+
+    @pytest.mark.blocker
+    def test_s05_cross_user_cart_access(base):
+        """Authorization: user B must not see user A's cart by presenting A's session id.
+        Online Boutique has no auth: the cookie IS the identity. We prove that the id is not bound to anything else."""
+        a = requests.Session(); a.get(base + "/")
+        a.post(base + "/cart", data={"product_id": "OLJCESPC7Z", "quantity": "2"})
+        sid = a.cookies.get("shop_session-id")
+        assert sid, "no session cookie"
+        # Positive control: A must see the item in A's OWN cart, otherwise "B sees nothing" proves nothing (e.g. cart service down).
+        own = a.get(base + "/cart")
+        assert own.status_code == 200 and "Sunglasses" in own.text, f"control failed: A cannot see own cart ({own.status_code})"
+        b = requests.Session()  # different client, different "browser", same stolen id
+        b.cookies.set("shop_session-id", sid)
+        cart_b = b.get(base + "/cart").text
+        # PASS means B could NOT see A's items. Expected to FAIL on upstream: session id alone grants access.
+>       assert "Sunglasses" not in cart_b and "OLJCESPC7Z" not in cart_b, "cross-user cart read via stolen/forged session id"
+E       AssertionError: cross-user cart read via stolen/forged session id
+E       assert ('Sunglasses' not in '\n    \n<!D...n</html>\n\n'
+E         
+E         'Sunglasses' is contained here:
+E                 <h4>Sunglasses</h4>
+E         ?           ++++++++++
+E                                           </div>
+E                                       </div>
+E                                       <div class="row cart-summary-item-row-item-id-row">...
+E         
+E         ...Full output truncated, use '-vv' to show)
+
+tests/test_frontend.py:56: AssertionError
+___________________________ test_s07_tls_front_door ____________________________
+
+base = 'http://localhost:8080'
+
+    @pytest.mark.blocker
+    def test_s07_tls_front_door(base):
+        """Checkout carries PII/card data: front door must serve HTTPS (directly or via ingress)."""
+        https = base.replace("http://", "https://")
+        try:
+            requests.get(https + "/", timeout=5, verify=False)
+            ok = True
+        except requests.exceptions.RequestException:
+            ok = False
+>       assert ok, "HTTPS not available on the frontend endpoint (plaintext HTTP only)"
+E       AssertionError: HTTPS not available on the frontend endpoint (plaintext HTTP only)
+E       assert False
+
+tests/test_frontend.py:73: AssertionError
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_frontend.py::test_s04_input_validation_and_reflection
+FAILED tests/test_cluster.py::test_s08_unauthenticated_internal_grpc - Assert...
+FAILED tests/test_cluster.py::test_s09_network_policies_exist - AssertionErro...
+FAILED tests/test_frontend.py::test_s03_error_pages_do_not_leak - AssertionEr...
+FAILED tests/test_frontend.py::test_s05_cross_user_cart_access - AssertionErr...
+FAILED tests/test_frontend.py::test_s07_tls_front_door - AssertionError: HTTP...
+5 failed, 1 passed, 7 deselected in 9.60s
